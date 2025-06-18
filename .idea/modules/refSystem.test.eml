@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/../../build/classes/java/test"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$/../../src/test"/>
+	<levels>
+		<level name="Gradle: com.zaxxer:HikariCP:5.0.1" value="project"/>
+		<level name="Gradle: org.slf4j:slf4j-api:1.7.30" value="project"/>
+		<level name="Gradle: com.mysql:mysql-connector-j:8.0.33" value="project"/>
+		<level name="Gradle: com.google.protobuf:protobuf-java:3.21.9" value="project"/>
+	</levels>
+</component>

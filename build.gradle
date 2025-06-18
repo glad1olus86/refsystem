@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+group = 'org.mjadapter'
+version = '1.0.1'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.papermc.io/repository/maven-public/' }
+}
+
+dependencies {
+    compileOnly 'io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT'
+    implementation 'com.zaxxer:HikariCP:5.0.1'
+    implementation 'mysql:mysql-connector-java:8.0.33'
+}
+
+processResources {
+    from('src/main/resources') {
+        include '**/*.yml'
+        duplicatesStrategy = 'include'
+    }
+}
+
+shadowJar {
+    archiveFileName = "RefSystem-${version}.jar"
+    mergeServiceFiles()
+
+    // Явно включаем все ресурсы
+    from(sourceSets.main.resources) {
+        include '**/*.yml'
+        duplicatesStrategy = 'include'
+    }
+}

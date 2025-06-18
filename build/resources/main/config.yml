@@ -1,0 +1,35 @@
+# Награды (выполняются от имени консоли)
+rewards:
+  levels:
+    1:  # Награда за 1 приглашение
+      commands:
+        - "give {inviter} minecraft:diamond 5"
+      message: "&aВы получили награду за 1 приглашение: 5 алмазов"
+    2:  # Награда за 2 приглашения
+      commands:
+        - "give {inviter} minecraft:emerald 10"
+      message: "&aВы получили награду за 2 приглашения: 10 изумрудов"
+    5:  # Награда за 5 приглашений
+      commands:
+        - "give {inviter} minecraft:gold_ingot 10"
+      message: "&aВы получили награду за 5 приглашений: 10 золотых слитков"
+
+messages:
+  your-code: "&aВаш реферальный код: &e%code%"
+  usage-ref: "&6Использование: &e/ref <код>"
+  already-used: "&cВы уже использовали реферальный код!"
+  invalid-code: "&cНедействительный реферальный код!"
+  self-invite: "&cВы не можете использовать собственный код!"
+  success-invited: "&aВы успешно использовали код приглашения от %inviter%!"
+  inviter-notify: "&aИгрок %invited% присоединился по вашему приглашению!"
+  error-occurred: "&cПроизошла ошибка при обработке команды"
+
+  database:
+    host: "sql7.freesqldatabase.com	"
+    port: 3306
+    name: "sql7784781" # Название БД, которую вы создадите вручную
+    username: "sql7784781" # Создайте отдельного пользователя
+    password: "2XnDYeumV9"
+    pool:
+      max-size: 10
+      connection-timeout: 30000

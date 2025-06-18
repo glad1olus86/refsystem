@@ -1,0 +1,25 @@
+name: RefSystem
+main: org.mjadapter.refSystem.ReferralSystem
+version: 1.0.1
+api-version: "1.20"
+authors: [mjadapter]
+
+permissions:
+  refsystem.use:
+    description: Доступ к основным командам реферальной системы
+    default: true # Разрешить всем игрокам по умолчанию
+  refsystem.admin:
+    description: Админские права реферальной системы
+    default: op # Только для OP
+
+commands:
+  ref:
+    description: Использовать реферальный код
+    usage: /ref <код>
+    permission: refsystem.use
+    permission-message: "§cУ вас нет прав на использование этой команды!"
+  refcode:
+    description: Получить свой реферальный код
+    usage: /refcode
+    permission: refsystem.use
+    permission-message: "§cУ вас нет прав на использование этой команды!"

@@ -1,0 +1,5 @@
+name: refSystem
+version: '1.0'
+main: org.mjadapter.refSystem.ReferralSystem
+api-version: '1.20'
+authors: [ mjadapter ]
